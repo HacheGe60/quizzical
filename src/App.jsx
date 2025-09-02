@@ -1,35 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import FirstPage from '../Components/FirstPage/FirstPage.jsx';
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <main class="relative w-full h-full flex justify-center items-center">
+        <div class="absolute -top-120 -right-120 h-64 w-64 bg-[#fff6b8] rounded-[55%_70%_45%_65%]"></div>
+        <div className="flex flex-col justify-center items-center w-full h-full">
+          <FirstPage />
+        </div>
+        <div class="absolute -bottom-120 -left-120 h-64 w-64 bg-[#dfeaff] rounded-[65%_45%_70%_55%]"></div>
+      </main>
+
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
